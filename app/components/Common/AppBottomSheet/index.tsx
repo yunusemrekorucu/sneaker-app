@@ -1,35 +1,22 @@
 import React, {memo, useEffect, useMemo, useRef} from 'react';
 import {Pressable, StatusBar, StyleSheet} from 'react-native';
-import {Portal} from 'react-native-portalize';
 
-import BottomSheet, {
-  BottomSheetBackdropProps,
-  BottomSheetScrollView,
-  BottomSheetView,
-  useBottomSheetDynamicSnapPoints,
-  useBottomSheetTimingConfigs,
-} from '@gorhom/bottom-sheet';
+import BottomSheet, {BottomSheetBackdropProps, BottomSheetScrollView, BottomSheetView, useBottomSheetDynamicSnapPoints, useBottomSheetTimingConfigs} from '@gorhom/bottom-sheet';
+import {Portal} from 'react-native-portalize';
 import Animated, {Easing, Extrapolate, interpolate, useAnimatedStyle} from 'react-native-reanimated';
 
-import {COLORS, SIZES, window} from '@/theme';
-import {rgba} from '@/utils';
-import {useTheme} from '@/hooks';
 import Block from '../Block';
 
-const AppBottomSheet = ({
-  children = <></>,
-  onClose = () => {},
-  isFlatList = false,
-  isVisible = false,
-  customStyles = {},
-  ...props
-}) => {
+import {useTheme} from '@/hooks';
+import {COLORS, SIZES, window} from '@/theme';
+import {rgba} from '@/utils';
+
+const AppBottomSheet = ({children = <></>, onClose = () => {}, isFlatList = false, isVisible = false, customStyles = {}, ...props}) => {
   const bottomSheetRef = useRef<BottomSheet>(null);
   const theme = useTheme();
 
   const initialSnapPoints = useMemo(() => ['CONTENT_HEIGHT'], []);
-  const {animatedHandleHeight, animatedSnapPoints, animatedContentHeight, handleContentLayout} =
-    useBottomSheetDynamicSnapPoints(initialSnapPoints);
+  const {animatedHandleHeight, animatedSnapPoints, animatedContentHeight, handleContentLayout} = useBottomSheetDynamicSnapPoints(initialSnapPoints);
 
   const animationConfigs = useBottomSheetTimingConfigs({
     duration: 200,

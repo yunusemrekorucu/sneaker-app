@@ -1,14 +1,17 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-hooks/exhaustive-deps */
+import React, {FC, useEffect, useState} from 'react';
+import {Keyboard, Modal, SafeAreaView} from 'react-native';
+
+import {debounce, get} from 'lodash';
+import {Controller} from 'react-hook-form';
+
+import RenderItem from './RenderItem';
+import AppInput from '../../../AppInput';
+
 import {AppButton, AppFlatList, AppIcon, Block, Text} from '@/components';
 import {useTheme} from '@/hooks';
 import {ICONS} from '@/utils';
-import {debounce, get} from 'lodash';
-import React, {FC, useEffect, useState} from 'react';
-import {Controller} from 'react-hook-form';
-import {Keyboard, Modal, SafeAreaView} from 'react-native';
-import AppInput from '../../../AppInput';
-import RenderItem from './RenderItem';
 
 interface AppMultipleSelectProps {
   placeholder?: string;
@@ -31,11 +34,7 @@ const AppMultipleSelect: FC<AppMultipleSelectProps | any> = props => {
   const theme = useTheme();
 
   const onFilter = debounce(text => {
-    setFilteredOptions(
-      options.filter((item: any) =>
-        get(item, displayProp).toLowerCase().includes(text.toLowerCase()),
-      ),
-    );
+    setFilteredOptions(options.filter((item: any) => get(item, displayProp).toLowerCase().includes(text.toLowerCase())));
   }, 300);
 
   useEffect(() => {
@@ -85,8 +84,7 @@ const AppMultipleSelect: FC<AppMultipleSelectProps | any> = props => {
               onPress={() => {
                 Keyboard.dismiss();
               }}>
-              <SafeAreaView
-                style={{flex: 1, backgroundColor: theme.colors.screenBgColor}}>
+              <SafeAreaView style={{flex: 1, backgroundColor: theme.colors.screenBgColor}}>
                 <Block style={{flex: 1}} py-20>
                   <Block row center px-12 pb-20>
                     <Block pr-20>
@@ -95,12 +93,7 @@ const AppMultipleSelect: FC<AppMultipleSelectProps | any> = props => {
                         onPress={() => {
                           setOpen(false);
                         }}
-                        icon={
-                          <AppIcon
-                            name={ICONS.arrowLeft}
-                            color={theme.colors.defaultTextColor}
-                          />
-                        }
+                        icon={<AppIcon name={ICONS.chevronLeft} color={theme.colors.defaultTextColor} />}
                       />
                     </Block>
                     <Block w-full style={{flex: 1}}>
@@ -128,9 +121,7 @@ const AppMultipleSelect: FC<AppMultipleSelectProps | any> = props => {
                           if (checked) {
                             selections = [...selections, renderItem];
                           } else {
-                            selections = selections.filter(
-                              (curr: any) => curr !== renderItem,
-                            );
+                            selections = selections.filter((curr: any) => curr !== renderItem);
                           }
                         }}
                       />

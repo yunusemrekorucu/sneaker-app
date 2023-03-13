@@ -3,6 +3,7 @@ import Routes from '../../Routes';
 import AuthStack from '../AuthStack';
 import HomeStack from '../HomeStack';
 
+import {DrawerMenuNavigaiton} from '@/navigation/drawer/DrawerMenuNavigation';
 import {SplashScreen, WelcomePage} from '@/screens';
 
 const Screens = [
@@ -32,6 +33,13 @@ const Screens = [
     component: HomeStack,
     options: {
       headerShown: true,
+    },
+  },
+  {
+    name: Routes.MAIN_DRAWER_ROOT,
+    component: DrawerMenuNavigaiton,
+    options: {
+      headerShown: false,
     },
   },
   {

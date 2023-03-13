@@ -4,6 +4,66 @@
     {
       "icon": {
         "paths": [
+          "M568.889 56.889h796.444c31.419 0 56.889 25.47 56.889 56.889s-25.47 56.889-56.889 56.889h-796.444c-31.419 0-56.889-25.47-56.889-56.889s25.47-56.889 56.889-56.889z",
+          "M170.667 455.111h1194.667c31.419 0 56.889 25.47 56.889 56.889s-25.47 56.889-56.889 56.889h-1194.667c-31.419 0-56.889-25.47-56.889-56.889s25.47-56.889 56.889-56.889z",
+          "M170.667 853.333h512c31.419 0 56.889 25.47 56.889 56.889s-25.47 56.889-56.889 56.889h-512c-31.419 0-56.889-25.47-56.889-56.889s25.47-56.889 56.889-56.889z"
+        ],
+        "attrs": [
+          {
+            "fill": "rgb(43, 43, 43)"
+          },
+          {
+            "fill": "rgb(43, 43, 43)"
+          },
+          {
+            "fill": "rgb(13, 110, 253)"
+          }
+        ],
+        "width": 1479,
+        "isMulticolor": true,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "hamburger"
+        ],
+        "colorPermutations": {
+          "1311025314343431": [
+            {
+              "f": 0
+            },
+            {
+              "f": 0
+            },
+            {
+              "f": 1
+            }
+          ]
+        }
+      },
+      "attrs": [
+        {
+          "fill": "rgb(43, 43, 43)"
+        },
+        {
+          "fill": "rgb(43, 43, 43)"
+        },
+        {
+          "fill": "rgb(13, 110, 253)"
+        }
+      ],
+      "properties": {
+        "order": 95,
+        "id": 0,
+        "name": "hamburger",
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
           "M660.48 733.184c-68.622 53.712-156.164 86.131-251.277 86.131-226.216 0-409.6-183.384-409.6-409.6s183.384-409.6 409.6-409.6c226.216 0 409.6 183.384 409.6 409.6 0 95.113-32.419 182.654-86.809 252.177l0.678-0.9 273.92 272.896-72.704 72.704-272.896-273.408zM409.6 716.8c169.662 0 307.2-137.538 307.2-307.2s-137.538-307.2-307.2-307.2v0c-169.662 0-307.2 137.538-307.2 307.2s137.538 307.2 307.2 307.2v0z"
         ],
         "attrs": [
@@ -25,7 +85,7 @@
         "name": "search",
         "prevSize": 20
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 0
     },
@@ -54,7 +114,7 @@
         "name": "google",
         "prevSize": 32
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 1
     },
@@ -78,7 +138,7 @@
         "prevSize": 24,
         "name": "microphone"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 2
     },
@@ -102,7 +162,7 @@
         "prevSize": 24,
         "name": "clock"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 3
     },
@@ -126,7 +186,7 @@
         "prevSize": 24,
         "name": "chevron-down"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 4
     },
@@ -150,7 +210,7 @@
         "prevSize": 24,
         "name": "edit"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 5
     },
@@ -174,7 +234,7 @@
         "prevSize": 24,
         "name": "mail"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 6
     },
@@ -198,7 +258,7 @@
         "prevSize": 24,
         "name": "phone"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 7
     },
@@ -226,7 +286,7 @@
         "prevSize": 24,
         "name": "menu"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 8
     },
@@ -256,7 +316,7 @@
         "name": "equalizer",
         "prevSize": 32
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 9
     },
@@ -280,7 +340,7 @@
         "prevSize": 24,
         "name": "plus"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 10
     },
@@ -304,7 +364,7 @@
         "prevSize": 24,
         "name": "shopping-bag"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 11
     },
@@ -332,7 +392,7 @@
         "name": "settings",
         "prevSize": 32
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 12
     },
@@ -364,7 +424,7 @@
         "name": "notification",
         "prevSize": 24
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 13
     },
@@ -388,7 +448,7 @@
         "prevSize": 24,
         "name": "log-out"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 14
     },
@@ -412,7 +472,7 @@
         "prevSize": 24,
         "name": "check"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 15
     },
@@ -451,7 +511,7 @@
         "name": "person",
         "prevSize": 24
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 16
     },
@@ -475,7 +535,7 @@
         "prevSize": 24,
         "name": "chevron-left"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 17
     },
@@ -499,7 +559,7 @@
         "prevSize": 24,
         "name": "eye"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 18
     },
@@ -523,7 +583,7 @@
         "prevSize": 24,
         "name": "eye-off"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 19
     },
@@ -547,7 +607,7 @@
         "prevSize": 24,
         "name": "heart"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 20
     },
@@ -571,7 +631,7 @@
         "prevSize": 24,
         "name": "trash"
       },
-      "setIdx": 0,
+      "setIdx": 1,
       "setId": 2,
       "iconIdx": 21
     }
@@ -602,7 +662,8 @@
       "color": 0,
       "bgColor": 16777215,
       "name": "icomoon",
-      "classSelector": ".icon"
+      "classSelector": ".icon",
+      "height": 32
     },
     "historySize": 50,
     "gridSize": 16,

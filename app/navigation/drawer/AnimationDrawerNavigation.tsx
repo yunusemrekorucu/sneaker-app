@@ -1,11 +1,14 @@
 import React, {FC, useEffect} from 'react';
-import {Alert, Pressable, StyleSheet, Text, Animated as RNAnimated} from 'react-native';
-import {createStackNavigator, StackNavigationProp} from '@react-navigation/stack';
-import {DrawerItem, createDrawerNavigator, DrawerContentScrollView} from '@react-navigation/drawer';
-import {DrawerMenuItemList} from './DrawerMenuItems';
-import Animated, {interpolateNode} from 'react-native-reanimated';
+import {Alert, Pressable, Animated as RNAnimated, StyleSheet, Text} from 'react-native';
+
+import {createDrawerNavigator, DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import {useNavigation} from '@react-navigation/native';
+import {createStackNavigator, StackNavigationProp} from '@react-navigation/stack';
+import Animated, {interpolateNode} from 'react-native-reanimated';
+
+import {DrawerMenuItemList} from './DrawerMenuItems';
 import Routes from '../Routes';
+
 import {AppImage, Block} from '@/components';
 
 const Stack = createStackNavigator();
@@ -25,12 +28,7 @@ const Screens: FC<any> = ({navigation, style}) => {
           ),
         }}>
         {DrawerMenuItemList.map(item => (
-          <Drawer.Screen
-            key={item.label}
-            options={{headerShown: item.headerShown}}
-            name={item.label}
-            component={item.component}
-          />
+          <Drawer.Screen key={item.label} options={{headerShown: item.headerShown}} name={item.label} component={item.component} />
         ))}
       </Stack.Navigator>
     </Animated.View>
@@ -51,30 +49,14 @@ const DrawerContent = (props: any) => {
           <AppImage url="https://image.com/image.png" size={60} resizeMode="center" style={styles.avatar} />
         </Block>
         <Block flex>
-          <DrawerItem
-            label="Dashboard"
-            style={styles.drawerItem}
-            onPress={() => navigation.navigate(Routes.HOME_SCREEN)}
-          />
-          <DrawerItem
-            label="Dashboard"
-            style={styles.drawerItem}
-            onPress={() => navigation.navigate(Routes.HOME_SCREEN)}
-          />
-          <DrawerItem
-            label="Dashboard"
-            style={styles.drawerItem}
-            onPress={() => navigation.navigate(Routes.HOME_SCREEN)}
-          />
+          <DrawerItem label="Dashboard" style={styles.drawerItem} onPress={() => navigation.navigate(Routes.HOME_SCREEN)} />
+          <DrawerItem label="Dashboard" style={styles.drawerItem} onPress={() => navigation.navigate(Routes.HOME_SCREEN)} />
+          <DrawerItem label="Dashboard" style={styles.drawerItem} onPress={() => navigation.navigate(Routes.HOME_SCREEN)} />
         </Block>
       </Block>
 
       <Block>
-        <DrawerItem
-          label="Logout"
-          labelStyle={{color: 'red'}}
-          onPress={() => Alert.alert('Are your sure to logout?')}
-        />
+        <DrawerItem label="Logout" labelStyle={{color: 'red'}} onPress={() => Alert.alert('Are your sure to logout?')} />
       </Block>
     </DrawerContentScrollView>
   );

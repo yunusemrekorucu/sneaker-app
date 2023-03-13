@@ -1,5 +1,6 @@
+import React, {FC, memo, ReactNode} from 'react';
+
 import {Block} from '@/components';
-import React, {FC, ReactNode, memo} from 'react';
 
 type Props = {
   children: ReactNode;

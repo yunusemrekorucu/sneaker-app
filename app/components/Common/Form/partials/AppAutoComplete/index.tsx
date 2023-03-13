@@ -1,13 +1,16 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-hooks/exhaustive-deps */
+import React, {FC, useEffect, useState} from 'react';
+import {Modal, Pressable, SafeAreaView, StyleSheet} from 'react-native';
+
+import {debounce, get} from 'lodash';
+import {Controller} from 'react-hook-form';
+
+import AppInput from '../../../AppInput';
+
 import {AppButton, AppFlatList, AppIcon, Block, Text} from '@/components';
 import {useTheme} from '@/hooks';
 import {ICONS} from '@/utils';
-import {debounce, get} from 'lodash';
-import React, {FC, useEffect, useState} from 'react';
-import {Controller} from 'react-hook-form';
-import {Modal, Pressable, SafeAreaView, StyleSheet} from 'react-native';
-import AppInput from '../../../AppInput';
 
 interface AppAutoCompleteProps {
   placeholder?: string;
@@ -28,11 +31,7 @@ const AppAutoComplete: FC<AppAutoCompleteProps | any> = props => {
   const theme = useTheme();
 
   const onFilter = debounce(text => {
-    setFilteredOptions(
-      options.filter((item: any) =>
-        get(item, displayProp).toLowerCase().includes(text.toLowerCase()),
-      ),
-    );
+    setFilteredOptions(options.filter((item: any) => get(item, displayProp).toLowerCase().includes(text.toLowerCase())));
   }, 300);
 
   useEffect(() => {
@@ -41,12 +40,7 @@ const AppAutoComplete: FC<AppAutoCompleteProps | any> = props => {
 
   useEffect(() => {
     if (open && get(current, valueProp)) {
-      setFilteredOptions([
-        current,
-        ...filteredOptions.filter(
-          (r: any) => get(r, valueProp) !== get(current, valueProp),
-        ),
-      ]);
+      setFilteredOptions([current, ...filteredOptions.filter((r: any) => get(r, valueProp) !== get(current, valueProp))]);
     }
   }, [open]);
 
@@ -82,8 +76,7 @@ const AppAutoComplete: FC<AppAutoCompleteProps | any> = props => {
               setOpen(!open);
             }}>
             <Block style={{flex: 1}}>
-              <SafeAreaView
-                style={{flex: 1, backgroundColor: theme.colors.screenBgColor}}>
+              <SafeAreaView style={{flex: 1, backgroundColor: theme.colors.screenBgColor}}>
                 <Block py-20 style={{flex: 1}}>
                   <Block row center px-12 w-full>
                     <Block style={{flex: 1}}>
@@ -92,12 +85,7 @@ const AppAutoComplete: FC<AppAutoCompleteProps | any> = props => {
                         onPress={() => {
                           setOpen(false);
                         }}
-                        icon={
-                          <AppIcon
-                            name={ICONS.arrowLeft}
-                            color={theme.colors.defaultTextColor}
-                          />
-                        }
+                        icon={<AppIcon name={ICONS.check} color={theme.colors.defaultTextColor} />}
                       />
                     </Block>
                     <Block style={{flex: 6}}>
@@ -133,8 +121,7 @@ const AppAutoComplete: FC<AppAutoCompleteProps | any> = props => {
                             },
                           ]}>
                           <Block row center>
-                            {get(item, valueProp) ==
-                              get(current, valueProp) && (
+                            {get(item, valueProp) == get(current, valueProp) && (
                               <Text
                                 mr-10
                                 styles={{
@@ -146,21 +133,9 @@ const AppAutoComplete: FC<AppAutoCompleteProps | any> = props => {
                             )}
                             <Text
                               styles={{
-                                color:
-                                  get(item, valueProp) ==
-                                  get(current, valueProp)
-                                    ? theme.colors.defaultTextColor
-                                    : theme.colors.defaultTextColor,
-                                fontSize:
-                                  get(item, valueProp) ==
-                                  get(current, valueProp)
-                                    ? 18
-                                    : 15,
-                                fontWeight:
-                                  get(item, valueProp) ==
-                                  get(current, valueProp)
-                                    ? 'bold'
-                                    : 'normal',
+                                color: get(item, valueProp) == get(current, valueProp) ? theme.colors.defaultTextColor : theme.colors.defaultTextColor,
+                                fontSize: get(item, valueProp) == get(current, valueProp) ? 18 : 15,
+                                fontWeight: get(item, valueProp) == get(current, valueProp) ? 'bold' : 'normal',
                               }}>
                               {get(item, displayProp)}
                             </Text>
