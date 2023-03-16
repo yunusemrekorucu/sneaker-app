@@ -4,7 +4,8 @@ import {FlatList, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import DropShadow from 'react-native-drop-shadow';
 
-import {AppBottomSheet, AppIcon, AppInput, AppScreen, Block, Text} from '@/components';
+import Banner from '@/assets/images/banner.png';
+import {AppBottomSheet, AppFlatList, AppIcon, AppImage, AppInput, AppScreen, Block, Text} from '@/components';
 import CategoryButton from '@/components/CategoryButton';
 import ProductCard from '@/components/ProductCard';
 import Routes from '@/navigation/Routes';
@@ -14,6 +15,34 @@ import {ICONS} from '@/utils';
 const HomeScreen = () => {
   const [visible, setVisible] = useState(false);
   const navigation = useNavigation() as any;
+
+  const categorys = [
+    {
+      id: 1,
+      categoryName: 'All Shoes',
+      isSelected: true,
+    },
+    {
+      id: 2,
+      categoryName: 'Outdoor',
+      isSelected: false,
+    },
+    {
+      id: 3,
+      categoryName: 'Tennis',
+      isSelected: false,
+    },
+    {
+      id: 4,
+      categoryName: 'Tennis',
+      isSelected: false,
+    },
+    {
+      id: 5,
+      categoryName: 'Tennis',
+      isSelected: false,
+    },
+  ];
 
   return (
     <AppScreen scroll>
@@ -33,29 +62,43 @@ const HomeScreen = () => {
           </DropShadow>
         </Block>
         <Block pressable onPress={() => setVisible(true)} style={[styles.filterButton]}>
-          <AppIcon name={ICONS.equalizer} color="#fff" size={18} />
+          <AppIcon name={ICONS.Filter} color="#fff" size={24} />
         </Block>
       </Block>
       <Block>
         <Block mt-24>
           <Text fs-16>Select Category</Text>
-          <Block row mt-10>
-            <CategoryButton primary title="All Shoes" />
-            <CategoryButton title="Outdoor" />
-            <CategoryButton title="Tennis" />
+          {/* //TODO: Horizontal Scroll */}
+          <Block mt-20>
+            <AppFlatList horizontal scrollEnabled={false} data={categorys} renderItem={CategoryButton} />
           </Block>
         </Block>
-        <Block mt-12>
-          <Block row>
+        <Block mt-20>
+          <Block row justify-between center>
             <Text fs-16>Popular Shoes</Text>
-            <Text fs-16>See all</Text>
+            <Text fs-13 primary>
+              See all
+            </Text>
           </Block>
-          <FlatList
+
+          <AppFlatList
+            scrollEnabled={false}
             columnWrapperStyle={{justifyContent: 'space-between'}}
             numColumns={2}
             data={[1, 2]}
             renderItem={() => <ProductCard onPress={() => navigation.navigate(Routes.PRODUCT_DETAIL_SCREEN)} />}
           />
+        </Block>
+        <Block mt-20>
+          <Block row justify-between center>
+            <Text fs-16>New Arrivals</Text>
+            <Text fs-13 primary>
+              See all
+            </Text>
+          </Block>
+          <Block mt-10>
+            <AppImage url={Banner} width={'100%'} height={115} />
+          </Block>
         </Block>
       </Block>
       {/* <AppButton title="detail" onPress={() => navigation.navigate(Routes.PRODUCT_DETAIL_SCREEN)} /> */}
@@ -70,7 +113,6 @@ const styles = StyleSheet.create({
   filterButton: {
     alignItems: 'center',
     justifyContent: 'center',
-    transform: [{rotate: '90deg'}],
     height: 50,
     width: 50,
     borderRadius: 50,

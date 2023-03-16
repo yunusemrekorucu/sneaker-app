@@ -8,7 +8,7 @@ export const createNavigationOptions = (props: any) => {
   const {screen} = props;
   const options = {
     // headerRight: () => <HeaderRight {...props} />,
-    headerStyle: {color: '#fff'},
+    headerStyle: {color: COLORS.white},
     headerTitle: screen.title ? screen.title : () => <AppImage url={Logo} width={135} height={46} />,
     // headerBackTitleVisible: false,
     headerTruncatedBackTitle: '',

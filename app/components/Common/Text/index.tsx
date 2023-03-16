@@ -7,35 +7,35 @@ import {useTheme, useTranslate} from '@/hooks';
 import {SIZES} from '@/theme';
 
 const Typography = (props: any) => {
-    const {children, params, animated, ...rest} = props;
-    const {textStyles, styles} = useTheme(props);
+  const {children, params, animated, ...rest} = props;
+  const {textStyles, styles} = useTheme(props);
 
-    // Translations
-    const _translate = useTranslate(children, params);
-    const i18nText = _translate ? _translate : children;
+  // Translations
+  const _translate = useTranslate(children, params);
+  const i18nText = _translate ? _translate : children;
 
-    // Content
-    const content = i18nText || '';
+  // Content
+  const content = i18nText || '';
 
-    const insideStyles = StyleSheet.flatten([
-        {
-            fontSize: RFValue(SIZES.font, Dimensions.get('window').height),
-        },
-    ]);
+  const insideStyles = StyleSheet.flatten([
+    {
+      fontSize: RFValue(SIZES.font, Dimensions.get('window').height),
+    },
+  ]);
 
-    if (animated) {
-        return (
-            <Animated.Text {...rest} style={[insideStyles, textStyles, styles, props.styles]}>
-                {content}
-            </Animated.Text>
-        );
-    }
-
+  if (animated) {
     return (
-        <Text {...rest} style={[insideStyles, textStyles, styles, props.styles]}>
-            {content}
-        </Text>
+      <Animated.Text {...rest} style={[insideStyles, textStyles, styles, props.styles]}>
+        {content}
+      </Animated.Text>
     );
+  }
+
+  return (
+    <Text {...rest} style={[insideStyles, textStyles, styles, props.styles]}>
+      {content}
+    </Text>
+  );
 };
 
 export default memo(Typography);

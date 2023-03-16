@@ -7,15 +7,22 @@ import ShoesImg from '@/assets/images/shoes.png';
 import {COLORS, window} from '@/theme';
 import {ICONS} from '@/utils';
 
-const ProductCard = ({onPress}: any) => {
+const ProductCard = ({onPress, favorite}: any) => {
   return (
     <Block pressable onPress={onPress} style={styles.card}>
       <Block style={styles.heart}>
-        <AppIcon name={ICONS.heart} size={18} color="#000" />
+        <AppIcon name={ICONS.Heart} size={18} color="#000" />
       </Block>
-      <Block style={styles.plus} pressable onPress={() => console.log('sepete eklendi')}>
-        <AppIcon name={ICONS.plus} size={21} color="#fff" />
-      </Block>
+      {favorite ? (
+        <Block absolute right-14 bottom-20 row>
+          <Block w-12 h-12 rounded-50 bg-primary />
+          <Block w-12 h-12 rounded-50 bg-secondary ml-6 />
+        </Block>
+      ) : (
+        <Block style={styles.plus} pressable onPress={() => console.log('sepete eklendi')}>
+          <AppIcon name={ICONS.Plus} size={18} color="#fff" />
+        </Block>
+      )}
       <Block middle flex>
         <Block center>
           <AppImage width={125} height={81} url={ShoesImg} />
@@ -35,7 +42,7 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: 'white',
     width: window.width / 2.4,
-    height: window.height / 4.4,
+    height: window.height / 4,
     marginTop: 10,
     borderRadius: 18,
     overflow: 'hidden',

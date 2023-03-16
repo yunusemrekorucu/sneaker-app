@@ -18,6 +18,8 @@ export default Object.freeze({
   // STACKS
   AUTH_STACK: 'AUTH_STACK',
   HOME_STACK: 'HOME_STACK',
+  FAVORITE_STACK: 'FAVORITE_STACK',
+  MY_CART_STACK: 'MY_CART_STACK',
 
   ALERT: 'ALERT', // Do not redirect!
 });

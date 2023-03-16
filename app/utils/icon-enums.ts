@@ -1,25 +1,3 @@
 export enum ICONS {
-  hamburger = 'hamburger',
-  search = 'search',
-  google = 'google',
-  microphone = 'microphone',
-  clock = 'clock',
-  chevronDown = 'chevron-down',
-  edit = 'edit',
-  mail = 'mail',
-  phone = 'phone',
-  menu = 'menu',
-  equalizer = 'equalizer',
-  plus = 'plus',
-  shoppingBag = 'shopping-bag',
-  settings = 'settings',
-  notification = 'notification',
-  logOut = 'log-out',
-  check = 'check',
-  person = 'person',
-  chevronLeft = 'chevron-left',
-  eye = 'eye',
-  eyeOff = 'eye-off',
-  heart = 'heart',
-  trash = 'trash',
-}
+    Heart = "Heart",Arrow = "Arrow",Cart = "Cart",Filter = "Filter",Hamburger = "Hamburger",Home = "Home",Notification = "Notification",Plus = "Plus",Trash = "Trash",User = "User"
+  }

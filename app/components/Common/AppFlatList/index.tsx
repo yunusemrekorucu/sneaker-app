@@ -29,6 +29,7 @@ const FlatList = ({
   columnWrapperStyle,
   contentContainerStyle,
   initialScrollIndex,
+  scrollEnabled,
   reference,
   ...props
 }: any) => {
@@ -82,6 +83,7 @@ const FlatList = ({
       refreshing={refreshing}
       keyExtractor={(_item, index) => 'flat_list_item_' + index}
       contentContainerStyle={contentContainerStyle}
+      scrollEnabled={scrollEnabled}
       numColumns={numColumns}
       columnWrapperStyle={columnWrapperStyle}
       removeClippedSubviews

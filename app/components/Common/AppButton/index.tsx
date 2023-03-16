@@ -41,7 +41,7 @@ const AppButton: FC<Props | any> = props => {
 
       {!loading && (
         <Block row center middle h-full>
-          <Text mr-6>{icon && icon}</Text>
+          <Text styles={{marginRight: title ? 8 : 0}}>{icon && icon}</Text>
           <Text medium style={[buttonTypes[type]?.text, styles.text]} styles={{color: titleColor}}>
             {title}
           </Text>
