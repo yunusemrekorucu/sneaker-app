@@ -1,39 +1,6 @@
-![visitor badge](https://visitor-badge.glitch.me/badge?page_id=tulparyazilim/react-native-typescript.visitor-badge)
-![React Native sneakerApp Stars](https://img.shields.io/github/stars/tulparyazilim/react-native-typescript)
-![React Native sneakerApp Top Language](https://img.shields.io/github/languages/top/tulparyazilim/react-native-typescript)
-![React Native sneakerApp TypeScript](https://badgen.net/npm/types/tslib)
-
-# React Native Typescript Template
-
-This project is a React Native sneakerapp that can be used to kickstart a mobile application.
-
-The sneakerapp provides an optimized architecture for building solid cross-platform mobile applications through separation of concerns between the UI and business logic. It is fully documented so that each piece of code that lands in your application can be understood and used.
-
-[View Documentation](https://react-native-sneakerapp.vercel.app/)
-
-## Requirements
-
-Node 14 or greater is required. Development for iOS requires a Mac and Xcode 10 or up, and will target iOS 11 and up.
-
-You also need to install the dependencies required by React Native.  
-Go to the [React Native environment setup](https://reactnative.dev/docs/environment-setup), then select `React Native CLI Quickstart` tab.  
-Follow instructions for your given `development OS` and `target OS`.
-
-## Quick start
-
-To create a new project using the sneakerapp simply run :
-
-```
-npx react-native init AwesomeProject --template tulparyazilim/react-native-typescript
-```
-
-Assuming you have all the requirements installed, you can run the project by running:
-
-- `yarn start` to start the metro bundler, in a dedicated terminal
-- `yarn <platform>` to run the _platform_ application (remember to start a simulator or connect a device)
-
-## 📫 Contact Us
-
-- Email - [info@tulparyazilim.com.tr](mailto:info@tulparyazilim.com.tr)
-- LinkedIn - [Tulpar Yazılım](https://www.linkedin.com/company/tulparyazilim)
-- Blog - [Blog](https://www.tulparyazilim.com.tr/blog)
+<img src="https://github.com/yunusemrq/sneaker-app/assets/98556406/d5be2459-ec2f-4693-a4f9-13bdb2cf78f8" width="250"/>
+<img src="https://github.com/yunusemrq/sneaker-app/assets/98556406/7eee327f-cafc-4adc-8613-1bf3cff80a30" width="250"/>
+<img src="https://github.com/yunusemrq/sneaker-app/assets/98556406/91e2a8d8-6447-4188-9376-e8fbd7e166ba" width="250"/>
+<img src="https://github.com/yunusemrq/sneaker-app/assets/98556406/810ad78a-9296-4edf-918d-ae52822f4aa6" width="250"/>
+<img src="https://github.com/yunusemrq/sneaker-app/assets/98556406/ecf5e200-7715-4af2-9622-ba81f30ccba6" width="250"/>
+<img src="https://github.com/yunusemrq/sneaker-app/assets/98556406/301286d9-a313-4f2d-ab3e-78ba9eb3926f" width="250"/>
