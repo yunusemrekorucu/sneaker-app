@@ -14,7 +14,7 @@ const RegisterScreen = () => {
     <AppScreen customStyle={{backgroundColor: 'white'}}>
       <Block flex>
         <Block pressable w-40 h-40 rounded-50 mt-50 mb-30 middle center bg-lightGray onPress={() => navigation.goBack()}>
-          <AppIcon name={ICONS.chevronLeft} color="#000" size={18} />
+          <AppIcon name={ICONS.Arrow} color="#000" size={21} />
         </Block>
         <Block middle>
           <Text t-center fs-32 medium>

@@ -1,6 +1,4 @@
-const TulparLogo = {
-    light: require('./logo.png'),
-    dark: require('./logo.png'),
+export const images = {
+  banner: require('./banner.png'),
+  splashScreen: require('./splash-screen.png'),
 };
-
-export default {TulparLogo};

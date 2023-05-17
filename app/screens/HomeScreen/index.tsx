@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import {FlatList, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
 import DropShadow from 'react-native-drop-shadow';
 
-import Banner from '@/assets/images/banner.png';
+import {images} from '@/assets/images';
 import {AppBottomSheet, AppFlatList, AppIcon, AppImage, AppInput, AppScreen, Block, Text} from '@/components';
 import CategoryButton from '@/components/CategoryButton';
 import ProductCard from '@/components/ProductCard';
@@ -97,7 +97,7 @@ const HomeScreen = () => {
             </Text>
           </Block>
           <Block mt-10>
-            <AppImage url={Banner} width={'100%'} height={115} />
+            <AppImage url={images.banner} width={'100%'} height={115} />
           </Block>
         </Block>
       </Block>

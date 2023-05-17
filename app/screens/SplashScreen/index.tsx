@@ -1,10 +1,10 @@
 import React, {memo, useEffect, useRef} from 'react';
-import {Animated, Easing, StyleSheet} from 'react-native';
+import {Animated, Easing} from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 
-import ISplashScreen from '@/assets/images/splash-screen.png';
+import {images} from '@/assets/images';
 import {AppImage, Block} from '@/components';
 import Routes from '@/navigation/Routes';
 import {window} from '@/theme';
@@ -25,18 +25,16 @@ const SplashScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       //   const navigationName = Routes.WELCOME_SCREEN;
-      const navigationName = Routes.MAIN_TABS_ROOT;
+      const navigationName = Routes.WELCOME_SCREEN;
       navigation.replace(navigationName);
     }, 2000);
   }, []);
 
   return (
     <Block flex>
-      <AppImage style={{flex: 1, width: window.width, height: window.height}} url={ISplashScreen} />
+      <AppImage style={{flex: 1, width: window.width, height: window.height}} url={images.splashScreen} />
     </Block>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default memo(SplashScreen);

@@ -41,10 +41,10 @@ const ProductDetailScreen = () => {
         </Text>
       </Block>
       <Block row center h-50 justify-between mt-30 px-20>
-        <AppButton bg-white rounded-50 w-50 center mr-10 middle h-50 icon={<AppIcon name={ICONS.heart} color="#000" size={24} />} />
+        <AppButton bg-white rounded-50 w-50 center mr-10 middle h-50 icon={<AppIcon name={ICONS.Heart} color="#000" size={24} />} />
         <AppButton
           style={{height: '100%', flex: 0.8, backgroundColor: COLORS.brightPrimary, borderRadius: 12}}
-          icon={<AppIcon name={ICONS.shoppingBag} color="#fff" size={24} />}
+          icon={<AppIcon name={ICONS.Cart} color="#fff" size={24} />}
           title="Add to Cart"
           titleColor="#fff"
         />
